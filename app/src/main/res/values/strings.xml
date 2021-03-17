@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exchange Rates</string>
+    <string name="main_activity_tv_title_id">ID</string>
+    <string name="main_activity_tv_titile_num_code">Num Code</string>
+    <string name="main_activity_tv_title_char_code">Char Code</string>
+    <string name="mani_activity_tv_titile_nominal">Nominal</string>
+    <string name="main_activity_tv_title_full_name">Full name</string>
+    <string name="main_activity_tv_title_value">Value</string>
+    <string name="main_activity_tv_title_previous">Previous</string>
+    <string name="currency_converter_bottom_sheet_tiet_base_currency_value">Base currency</string>
+    <string name="currency_converter_bottom_sheet_btn_currency_convert">Convert</string>
+    <string name="currency_converter_default_value">0.0</string>
+</resources>

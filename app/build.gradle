@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        viewBinding = true
+    }
+    defaultConfig {
+        applicationId "ws.worldshine.exchangerates"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.activity:activity-ktx:$activity_ktx_version"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    // Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    // OkHttp3 inspector
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3Version"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    //Paging 3
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+    //Dagger 2
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+
+}
